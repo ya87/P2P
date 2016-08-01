@@ -1,0 +1,45 @@
+Name: Yogesh Aggarwal
+UFID: 1311-1361
+
+
+Files Submitted:
+===============
+- P2P.zip
+	- data/
+		- Server/
+	- Client.java
+	- Server.java
+	- peers.cfg
+	- server.cfg
+	- README.txt
+	- Client.class
+	- ClientHandler$1.class
+	- ClientHandler.class
+	- ClientUtility.class
+	- Server.class
+	- ServerHandler.class
+	- ServerUtility.class
+	- TYPE.class
+
+
+Config Files:
+============
+1) server.cfg - contains following server configuration:
+	- PORT : port number on which server is listening
+	- NUM_CLIENTS : maximum number of clients in the P2P network that'll connect to this server
+	- FILE_LOC : directory where files that need to be distributed exist 
+	- CHUNK_SIZE : size of the chunk in which file should be broken into
+2) peers.cfg - contains topology of the network defined as 3-tuple for each peer
+	- <peer_id, peer_listening_port, download_neighbor_listening_port>
+
+
+How to run:
+==========
+1) Unzip P2P.zip
+2) If machine has jre8 then move to step3 otherwise delete all the class files in P2P directory and recompile Server.java and Client.java as:
+	> javac *.java
+3) Run Server as:
+	> java Server
+4) When prompted for filename, enter name of file to be distributed to peers in this P2P network. Make sure the file exists in P2P/data/Server directory.
+5) Run Client in 'n' (n = NUM_CLIENTS, as defined in server.cfg) different terminals as:
+	> java Client
