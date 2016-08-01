@@ -1,5 +1,5 @@
-
-## Config Files
+Config Files
+============
 1) server.cfg - contains following server configuration:
 	- PORT : port number on which server is listening
 	- NUM_CLIENTS : maximum number of clients in the P2P network that'll connect to this server
@@ -9,7 +9,8 @@
 	- <peer_id, peer_listening_port, download_neighbor_listening_port>
 
 
-## How to run
+How to run
+==========
 1) Unzip P2P.zip
 2) If machine has jre8 then move to step3 otherwise delete all the class files in P2P directory and recompile Server.java and Client.java as:
 	> javac *.java
